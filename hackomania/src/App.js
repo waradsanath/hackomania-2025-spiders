@@ -1,33 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from 'react'
+import { useState} from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Ingredients from './skibidi'
+import HomePage from "./home"
 
 function App() {
-  const [recents,setRecents] = useState(["Test", "Test", "Test","Test", "Test", "Test", "Test", "Test"])
 
 
   return (
-    <div className="App">
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<HomePage />}/>
+        <Route path="/Ingredients" exact element={<Ingredients />}/>
 
-      <header className="App-header">
-        <a style={{padding: 30, fontWeight:'bold', fontSize:30}}>        Kitchen Copilot</a>
-
-        <div className='recents'>
-            <p>Recents: </p>
-
-            {recents.map((recent)=>{
-            return(
-              <p style={{marginLeft: 5,}}> 
-                {recent}
-              </p>
-            )
-          })}
-
-        </div>
-      </header>
-      <div className="body">
-      </div>
-    </div>
+      </Routes>
+    </Router>
   );
 }
 

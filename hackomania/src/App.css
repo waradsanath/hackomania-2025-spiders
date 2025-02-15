@@ -80,3 +80,17 @@
   }
 
 }
+
+.addIngredient {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    margin:5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: fit-content;
+  }
+}

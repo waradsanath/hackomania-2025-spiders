@@ -10,8 +10,17 @@ function Ingredients() {
     {"Alex":5},
     {"Cauliflower":5},
     {"Chips":5}
-
   ]);
+
+  const [newName,setNewName] = useState("");
+  const [newQuantity,setNewQuantity] = useState("");
+
+  const handleNewItem = () => {
+    const newResources = [...resources, {newName: newQuantity}]
+    setResources(newResources)
+    setNewName("")
+    setNewQuantity("")
+  };
     return(
     <div className="App">
 
@@ -47,7 +56,13 @@ function Ingredients() {
               </div>
 
             <div className="box2">
-              <Link to="/AddIngredients" >Add Ingredients</Link>
+              <b>Add Ingredient</b>
+              
+              <form className="addIngredient" onSubmit={handleNewItem}>
+                <input type="text" onChange={setNewName} placeholder="Name:"/>
+                <input type="number" onChange={setNewQuantity} placeholder="Amount"/>
+                <button type="submit">Add</button>
+              </form>
             
               
                

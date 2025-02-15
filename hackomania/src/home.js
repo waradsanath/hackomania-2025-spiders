@@ -22,6 +22,8 @@ function HomePage() {
 
             </div>
         </header>
+
+
         <div className="body">
             <div className='box'>
             <li>

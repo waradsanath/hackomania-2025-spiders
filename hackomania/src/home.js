@@ -29,7 +29,7 @@ function HomePage() {
                 <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Ingredients">My Pantry</Link>
             </div>
             <div className='box'>
-                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Gemini">To Gemini</Link>
+                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Gemini">Generate Recipies</Link>
             </div>
             <div className='box'>
                 <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Context">To Context</Link>

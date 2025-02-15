@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Ingredients() {
@@ -16,11 +16,17 @@ function Ingredients() {
   const [newQuantity,setNewQuantity] = useState("");
 
   const handleNewItem = () => {
-    const newResources = [...resources, {newName: newQuantity}]
+    const newResources = [resources, {newName: parseInt(newQuantity)}]
     setResources(newResources)
+    console.log(`THing ${newResources}`)
     setNewName("")
     setNewQuantity("")
+    
   };
+
+  useEffect(()=>{
+    console.log(resources)
+  })
     return(
     <div className="App">
 

@@ -20,7 +20,7 @@
 }
 .body {
   flex:5;
-  background-color: #878472;
+  background-color: #eaeaea;
   
 }
 .App-header {
@@ -29,15 +29,15 @@
   flex-direction: row;
   justify-content: space-between;
   
-  background-color: #de541e;
-  align-items: center;
+  background-color: #4a90e2;
+  align-items: center; 
   
 }
 
 .box {
-  margin: 25px;
-  padding: 10px;
+  margin: 40px;
+  padding: 20px;
   border-radius: 10px;
-  background-color: #494331;
-  color: #d6d6b1;
+  background-color: #848484;
+  color: #ffd770;
 }

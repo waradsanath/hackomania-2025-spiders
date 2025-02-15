@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Link} from 'react-router-dom'
 
 function HomePage() {
-    const [recents, setRecents] = useState(["Test", "Test", "test", "ttest", "Test"])
+    const [recents, setRecents] = useState(["NIL", "Test", "test", "ttest", "Test"])
     return(
         <div className="App">
 
@@ -25,7 +25,7 @@ function HomePage() {
         <div className="body">
             <div className='box'>
             <li>
-                <Link style={{fontSize: 20, color:"#d6d6b1"}} to="/Ingredients">My Pantry</Link>
+                <Link style={{fontSize: 20, color:"#FFFFFF"}} to="/Ingredients"> My Pantry</Link>
             </li>
             </div>
         </div>

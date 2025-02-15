@@ -6,6 +6,8 @@ import Ingredients from './skibidi'
 import HomePage from "./home"
 import LoginPage from './login';
 import SignUpPage from './signUp';
+import AddIngredients from './Ingredients/addIngredients';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path="/Ingredients" exact element={<Ingredients />}/>
         <Route path="/Login" exact element={<LoginPage />}/>
         <Route path="/SignUp" exact element={<SignUpPage/>}/>
+        <Route path="/AddIngredients" exact element={<AddIngredients />} />
       </Routes>
     </Router>
   );

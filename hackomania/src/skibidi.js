@@ -2,10 +2,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Ingredients() {
-  const [rsources,setResources] = useState({
-    "Celery" : "5",
-    "Brocoli" : "10"
-})
+  const [resources,setResources] = useState([
+    {"Celery":5},
+    {"Brocoli":5},
+    {"Beef":5},
+    {"Chicken":5},
+    {"Alex":5},
+    {"Cauliflower":5},
+    {"Chips":5}
+
+  ]);
     return(
     <div className="App">
 
@@ -25,10 +31,26 @@ function Ingredients() {
                 <b>Ingredients</b>
             </div>
 
-
-            <div className="box">
+            <div style={{flexDirection:'row', }}>
               
+              <div className="box">
+              {resources.map((resource, index) => { 
+                const ingredient = Object.keys(resource)[0]
+                const quantity = resource[ingredient];       
+                return (
+                  <p key={index}>
+                    {ingredient}: {quantity}
+                  </p>
+                );
+              })}
+              </div>
+
+
+              <div className="box">
+                <Link to="/AddIngredients" >Add Ingredients</Link>
+              </div>
             </div>
+            
             
         </div>
         <div style={{flex:1}}>

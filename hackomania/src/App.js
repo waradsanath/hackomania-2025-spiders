@@ -7,6 +7,7 @@ import HomePage from "./home"
 import LoginPage from './login';
 import SignUpPage from './signUp';
 import AddIngredients from './Ingredients/addIngredients';
+import Context from './contexts/contextualclues';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Login" exact element={<LoginPage />}/>
         <Route path="/SignUp" exact element={<SignUpPage/>}/>
         <Route path="/AddIngredients" exact element={<AddIngredients />} />
+        <Route path="/Context" exact element={<Context />}/>
       </Routes>
     </Router>
   );

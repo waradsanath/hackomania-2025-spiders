@@ -29,6 +29,10 @@ function HomePage() {
             <li>
                 <Link style={{fontSize: 20, color:"#FFFFFF"}} to="/Ingredients"> My Pantry</Link>
             </li>
+
+            <li>
+                <Link to="/Context">To Context</Link>
+            </li>
             </div>
         </div>
         </div>

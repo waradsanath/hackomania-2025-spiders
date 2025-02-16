@@ -19,9 +19,9 @@ function HomePage() {
                 </p>
                 )
             })} */}
-            <button onClick={()=>{navigate("/")}} className="HeaderNav">Home</button>
-            <button onClick={()=>{navigate("/Gemini")}} className="HeaderNav">Generate Recipies</button>
-            <button onClick={()=>{navigate("/Login")}} className="logut">Log Out</button>
+            <button onClick={()=>{navigate("/")}} className="logut">Home</button>
+            <button onClick={()=>{navigate("/Gemini")}} className="logut">Generate Recipies</button>
+            <button onClick={()=>{navigate("/Login")}} className="logout">Log Out</button>
 
             </div>
         </header>
@@ -40,7 +40,7 @@ function HomePage() {
                 <div className='box' style={{flex:1,padding:92}}>
                     <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Context">To Context</Link>
                 </div>
-        </div>
+            </div>
         </div>
     )
 }

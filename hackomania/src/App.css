@@ -31,6 +31,27 @@
 
 }
 
+.logout:hover {
+  background: #ffc2c2;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.logout {
+  display: flex;
+
+  font-size: large;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(255, 227, 227);
+
+}
+
+.logut:hover {
+  background: #dbdbdb;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
 .box {
   background: #4A90E2;
   padding: 15px 30px;
@@ -44,7 +65,7 @@
 }
 
 .box:hover {
-  background: #357ABD;
+  background: #ffa8ad;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
 }
 
@@ -83,7 +104,6 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  flex-direction: row;
 }
 
 .body1 {

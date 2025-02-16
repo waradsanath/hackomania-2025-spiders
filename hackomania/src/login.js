@@ -37,7 +37,7 @@ function LoginPage() {
             </header>
 
 
-            <div>
+            <div style={{padding:200}}>
                 
                 <form className="loginForm" onSubmit={handleLogin}>
                     <b>Login</b>

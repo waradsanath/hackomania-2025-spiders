@@ -38,7 +38,7 @@ function SignUpPage() {
             </header>
 
 
-            <div>
+            <div style={{padding:200}}>
                 
                 <form className="loginForm" onSubmit={handleSignUp}>
                     <b>Sign up</b>

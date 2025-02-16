@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Ingredients() {
   const [resources, setResources] = useState([
@@ -12,6 +12,7 @@ function Ingredients() {
     { name: "Potatoes", number: 5 },
   ]);
 
+  const navigate = useNavigate()
   const [newName, setNewName] = useState("");
   const [newQuantity, setNewQuantity] = useState("");
 
@@ -31,16 +32,10 @@ function Ingredients() {
   return (
     <div className="App">
       <header className="App-header">
-        <a style={{ padding: 30, fontWeight: "bold", fontSize: 30 }}>
-          Ingredients
-        </a>
-
-        <div className="recents">
-          <p>
-            Recents:
-            <Link to="/"> To Home </Link>
-          </p>
-        </div>
+            <a style={{padding: 30, fontWeight:'bold', fontSize:30}}>        Kitchen Copilot</a>
+            <button onClick={()=>{navigate("/")}} className="logut">Home</button>
+            <button onClick={()=>{navigate("/Gemini")}} className="logut">Generate Recipies</button>
+            <button onClick={()=>{navigate("/Login")}} className="logout">Log Out</button>
       </header>
       <div className="body2">
         <div style={{ flex: 3 }}>

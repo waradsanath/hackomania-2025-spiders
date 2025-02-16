@@ -56,23 +56,30 @@ function Context() {
   const navigate = useNavigate();
 
   return (
-    <div className="App">
+
+    <div>
       <header className="App-header">
             <a style={{padding: 30, fontWeight:'bold', fontSize:30}}>        Kitchen Copilot</a>
 
-          
+            <div className='recents'>
+                {/* <p>Recents: </p>
+
+                {recents.map((recent)=>{
+                return(
+                <p style={{marginLeft: 5,}}> 
+                    {recent}
+                </p>
+                )
+            })} */}
             <button onClick={()=>{navigate("/")}} className="logut">Home</button>
             <button onClick={()=>{navigate("/Gemini")}} className="logut">Generate Recipies</button>
             <button onClick={()=>{navigate("/Login")}} className="logout">Log Out</button>
 
-            
+            </div>
         </header>
 
-
-
-        
       
-      <form onSubmit={handleSubmit} className="preferenceform">
+      <form onSubmit={handleSubmit} className="body">
         <input
           type="text"
           placeholder="Max calories?"
@@ -126,7 +133,12 @@ function Context() {
           onChange={(e) => setExtra(e.target.value)}
         />
         <button type="submit">Generate Recipe</button>
+        <div style={{alignContent:'center',alignItems:'center',justifyContent:'center'}}>
+      <b style={{textAlign:'center'}}>Ingredients: {variable}</b>
+      <p style={{textAlign:'center'}}>recipe: {variable2}</p>
+      </div>
       </form>
+      
       </div>
   );
 };

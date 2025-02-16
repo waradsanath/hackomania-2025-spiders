@@ -28,11 +28,6 @@ function HomePage() {
 
 
         <div className="body">
-
-                <div className='box' style={{padding:93,flex:1,}}>
-                    <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Ingredients">My Pantry</Link>
-                </div>
-
                 <div className='box' style={{flex:1,padding:93}}>
                     <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Gemini">Generate Recipies</Link>
                 </div>

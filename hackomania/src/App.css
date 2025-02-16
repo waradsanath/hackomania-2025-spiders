@@ -11,18 +11,6 @@
   }
 }
 
-.preferenceform {
-  display: flex;
-  flex-direction: column;
-  input {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-
-  }
-
-}
-
 .HeaderNav {
   width: 100px;
   height: 40px;
@@ -110,12 +98,22 @@
 }
 
 .body {
+  flex-direction: column;
   flex: 5;
   background-color: #61dafb;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  input {
+    padding: 10px;
+    margin: 20px;
+  };
+
+  button {
+    padding: 10px;
+    margin: 20px;
+  };
 }
 
 .body1 {

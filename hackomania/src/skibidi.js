@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 
 function Ingredients() {
-  const [prompta,setPrompta] = useState('')
-  const [ingredientsa,setIngredients] = useState("")
-  const [answer,setAnswer] = useState("")
   const [resources, setResources] = useState([
     { name: "Celery", number: 5 },
     { name: "Brocoli", number: 5 },
@@ -16,34 +12,6 @@ function Ingredients() {
     { name: "Potatoes", number: 5 },
   ]);
 
-    const genAI = new GoogleGenerativeAI("AIzaSyCjYD-Dh4i7tjiLXss7hxYl9hnQ97YBYV4");
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-    const sendMesssage = async () => {
-
-      try {
-        console.log("Loading...")
-        const ingredients = await model.generateContent("Write a list of ingredients for making" + + ", in the following format: \n Ingredients: A, B, C. Strictly do not bold any words ")
-        
-
-        console.log("still loading...")
-        const responseIngredients = await ingredients.response;
-        setIngredients(responseIngredients.candidates[0].content.parts[0].text)
-        console.log(ingredientsa)
-
-        
-
-        const responseRecipe = await answer.response;
-        console.log("Finished!")
-        console.log(responseIngredients)
-
-        
-        setAnswer(responseRecipe.candidates[0].content.parts[0].text)
-      } catch(e) {
-        console.error(e)
-
-      }
-    }
   const navigate = useNavigate()
   const [newName, setNewName] = useState("");
   const [newQuantity, setNewQuantity] = useState("");
@@ -57,9 +25,9 @@ function Ingredients() {
     setNewQuantity("");
   }
 
-  useEffect(() => {
-    console.log(resources);
-  }, [resources]); // Add resources to the dependency array of useEffect
+  // useEffect(() => {
+  //   console.log(resources);
+  // }, [resources]); // Add resources to the dependency array of useEffect
 
   return (
     <div className="App">
@@ -106,7 +74,6 @@ function Ingredients() {
 
         <div className="box2" style={{ flex: 1 }}>
           <b style={{ justifyContent: "end", padding: "50" }}>Recipies</b>
-
         </div>
       </div>
     </div>

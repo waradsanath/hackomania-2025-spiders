@@ -8,8 +8,6 @@ function LoginPage() {
     const [password,setPassword] = useState("")
     const [error,setError] = useState(false)
 
-
-    
     const navigate = useNavigate()
 
     const handleLogin = (event) => {
@@ -48,7 +46,7 @@ function LoginPage() {
                     <button type="submit">Login</button>
                     {error && <span>Incorrect user email or password. Try again</span>}
                 </form>
-                <Link to="/SignUp">Don't have an account? Sign up here</Link>
+                <Link to="/SignUp">Don't have an account? Skill issue</Link>
             </div>
         </div>
     );

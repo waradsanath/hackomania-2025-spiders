@@ -1,7 +1,8 @@
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 function HomePage() {
+    const navigate = useNavigate()
     return(
         <div className="App">
 
@@ -18,21 +19,26 @@ function HomePage() {
                 </p>
                 )
             })} */}
-            <Link to="/Login">Log Out</Link>
+            <button onClick={()=>{navigate("/")}} className="HeaderNav">Home</button>
+            <button onClick={()=>{navigate("/Gemini")}} className="HeaderNav">Generate Recipies</button>
+            <button onClick={()=>{navigate("/Login")}} className="logut">Log Out</button>
 
             </div>
         </header>
 
 
         <div className="body">
-            <div className='box'>
-                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Ingredients">My Pantry</Link>
-            </div>
-            <div className='box'>
-                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Gemini">Generate Recipies</Link>
-            </div>
-            <div className='box'>
-                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Context">To Context</Link>
+            <div style={{flexDirection:"row"}}>
+                <div className='box' style={{padding:93,flex:1}}>
+                    <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Ingredients">My Pantry</Link>
+                </div>
+                <div className='box' style={{flex:1,padding:93}}>
+                    <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Gemini">Generate Recipies</Link>
+                </div>
+                <div className='box' style={{flex:1,padding:92}}>
+                    
+                    <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Context">To Context</Link>
+                </div>
             </div>
         </div>
         </div>
@@ -40,3 +46,4 @@ function HomePage() {
 }
 
 export default HomePage;
+                

@@ -35,7 +35,7 @@ function Geminie() {
     return(
         <div className="App">
         <header className="App-header">
-            <a style={{padding: 30, fontWeight:'bold', fontSize:30}}>        Kitchen Copilot</a>
+            <a style={{padding: 15, fontWeight:'bold', fontSize:30}}>        Kitchen Copilot</a>
 
             <div className='recents'>
                 <Link to="/">To Home</Link>
@@ -43,7 +43,7 @@ function Geminie() {
         </header>
 
             <div className="gemini">
-                <div>
+                <div style={{padding:100, fontSize:50}}> 
                 <input placeholder="value" type="text" onChange={(e)=>setPrompta(e.target.value)}/>
                 <button onClick={sendMesssage}>Send</button>
                 </div>

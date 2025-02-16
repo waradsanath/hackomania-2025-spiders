@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Context() {
   const [cal, setCal] = useState("");
@@ -38,9 +39,26 @@ function Context() {
     }
   };
 
+  const navigate = useNavigate()
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="App">
+      <header className="App-header">
+            <a style={{padding: 30, fontWeight:'bold', fontSize:30}}>        Kitchen Copilot</a>
+
+          
+            <button onClick={()=>{navigate("/")}} className="logut">Home</button>
+            <button onClick={()=>{navigate("/Gemini")}} className="logut">Generate Recipies</button>
+            <button onClick={()=>{navigate("/Login")}} className="logout">Log Out</button>
+
+            
+        </header>
+
+
+
+        
+      
+      <form onSubmit={handleSubmit} className="preferenceform">
         <input
           type="text"
           placeholder="Max calories?"
@@ -96,7 +114,7 @@ function Context() {
         <button type="submit">Generate Recipe</button>
       </form>
       <p>{variable}</p>
-    </div>
+      </div>
   );
 }
 

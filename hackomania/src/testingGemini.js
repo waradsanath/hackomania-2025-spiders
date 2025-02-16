@@ -16,7 +16,7 @@ function Geminie() {
         setReply(null)
         
         console.log("Loading...")
-        const result = await model.generateContent(prompta)
+        const result = await model.generateContent("make a step by step recipie for making" + prompta)
         console.log("still loading...")
         const response = await result.response;
         console.log("Finished!")
@@ -39,17 +39,16 @@ function Geminie() {
 
             <div className='recents'>
                 <Link to="/">To Home</Link>
-
-            
-
             </div>
         </header>
 
             <div className="gemini">
+                <div>
                 <input placeholder="value" type="text" onChange={(e)=>setPrompta(e.target.value)}/>
                 <button onClick={sendMesssage}>Send</button>
+                </div>
                 
-                {reply ? <p style={{maxWidth: 500}}>{reply}</p> : <p>Loading...</p>}
+                {reply ? <p>{reply}</p> : <p>Loading...</p>}
 
                 
 

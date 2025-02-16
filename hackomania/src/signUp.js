@@ -20,10 +20,10 @@ function SignUpPage() {
             navigate("/Login")
         })
         .catch((error) => {
-            setError(true)
+            
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode)
+            setError(errorCode)
             
             // ..
         });
@@ -46,9 +46,9 @@ function SignUpPage() {
                     <input type="password" placeholder="insert password" onChange={e=>setPassword(e.target.value)} />
                     <button type="submit">Sign up</button>
                     
+                    
                 </form>
                 <Link to="/Login">Already have an account? Login here</Link>
-
             </div>
         </div>
     );

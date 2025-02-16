@@ -19,21 +19,22 @@ function Ingredients() {
         <a style={{padding: 30, fontWeight:'bold', fontSize:30}}>        Ingredients</a>
 
         <div className='recents'>
-            <p>Recents: </p>
-                <Link to="/"> To Home </Link>
+            <p>Recents:<Link to="/"> 
+             To Home </Link></p>
         </div>
 
         
       </header>
       <div className="body2">
+
         <div style={{flex:3}}>
-            <div className="box">
+
+          
+            <div className="box2">
                 <b>Ingredients</b>
             </div>
-
-            <div style={{flexDirection:'row', }}>
               
-              <div className="box">
+              <div className="box2">
               {resources.map((resource, index) => { 
                 const ingredient = Object.keys(resource)[0]
                 const quantity = resource[ingredient];       
@@ -45,17 +46,20 @@ function Ingredients() {
               })}
               </div>
 
-
-              <div className="box">
-                <Link to="/AddIngredients" >Add Ingredients</Link>
-              </div>
+            <div className="box2">
+              <Link to="/AddIngredients" >Add Ingredients</Link>
+            
+              
+               
             </div>
             
-            
         </div>
-        <div style={{flex:1}}>
-            
+
+        <div className="box2" style={{flex:1}}>
+          <b style={{justifyContent:'end', padding:'50'}}>Recipies</b>
         </div>
+
+
       </div>
     </div>
     );

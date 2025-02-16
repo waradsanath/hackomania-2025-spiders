@@ -26,12 +26,15 @@ function HomePage() {
 
         <div className="body">
             <div className='box'>
+            <li style={{margin:'50'}}>
+                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Ingredients">- My Pantry</Link>
+            </li>
             <li>
-                <Link style={{fontSize: 20, color:"#FFFFFF"}} to="/Ingredients"> My Pantry</Link>
+
             </li>
 
-            <li>
-                <Link to="/Context">To Context</Link>
+            <li style={{margin:'50'}}>
+                <Link style={{fontSize: 25, color:"#FFFFFF"}} to="/Context">- To Context</Link>
             </li>
             </div>
         </div>

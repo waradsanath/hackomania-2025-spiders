@@ -49,11 +49,11 @@ function Context() {
     } catch (error) {
       console.error("Error:", error);
       setVariable("Failed to fetch recipe. Try again.");
-      setVariable2("Failed to fetch recipe. Try again.")
+      setVariable2("Failed to fetch recipe. Try again.");
     }
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div className="App">
@@ -127,18 +127,8 @@ function Context() {
         />
         <button type="submit">Generate Recipe</button>
       </form>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <p>{variable}</p>
       </div>
-=======
-=======
->>>>>>> Stashed changes
-      <p><bold>Ingredients: {variable}</bold></p>
-      <p>{variable2}</p>
-    </div>
->>>>>>> Stashed changes
   );
-}
+};
 
 export default Context;

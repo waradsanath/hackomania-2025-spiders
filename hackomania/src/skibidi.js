@@ -15,9 +15,10 @@ function Ingredients() {
   const [newName, setNewName] = useState("");
   const [newQuantity, setNewQuantity] = useState("");
 
-  const handleNewItem = () => {
+  const handleNewItem = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+
     setResources(previous => [...previous,{ name: newName, number: parseInt(newQuantity, 10) }]);
-    console.log(resources)
 
     setNewName("");
     setNewQuantity("");

@@ -127,14 +127,8 @@ function Context() {
         />
         <button type="submit">Generate Recipe</button>
       </form>
-<<<<<<< Updated upstream
       <p>{variable}</p>
       </div>
-=======
-      <p><bold>Ingredients: {variable}</bold></p>
-      <p>{variable2}</p>
-    </div>
->>>>>>> Stashed changes
   );
 }
 

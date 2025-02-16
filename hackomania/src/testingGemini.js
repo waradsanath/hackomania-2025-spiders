@@ -1,6 +1,5 @@
 import { use, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 
 function Geminie() {

@@ -28,18 +28,18 @@ function HomePage() {
 
 
         <div className="body">
-            <div style={{flexDirection:"row"}}>
-                <div className='box' style={{padding:93,flex:1}}>
+
+                <div className='box' style={{padding:93,flex:1,}}>
                     <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Ingredients">My Pantry</Link>
                 </div>
+
                 <div className='box' style={{flex:1,padding:93}}>
                     <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Gemini">Generate Recipies</Link>
                 </div>
+
                 <div className='box' style={{flex:1,padding:92}}>
-                    
                     <Link style={{fontSize: 30, color:"#FFFFFF"}} to="/Context">To Context</Link>
                 </div>
-            </div>
         </div>
         </div>
     )

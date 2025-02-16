@@ -9,6 +9,7 @@ function Context() {
   const [diet, setDiet] = useState("");
   const [spice, setSpice] = useState("");
   const [variable, setVariable] = useState("");
+  const [extra, setExtra] = useState("")
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page refresh
@@ -24,6 +25,7 @@ function Context() {
         ${isMicr ? "They have a microwave." : "They do not have a microwave."}
         Their dietary preference is ${diet}.
         They prefer a spice level of ${spice}.
+        They have extra preferences of ${extra}.
     `;
 
     try {
@@ -84,6 +86,12 @@ function Context() {
           placeholder="Spice level?"
           value={spice}
           onChange={(e) => setSpice(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Extra Preferences?"
+          value={extra}
+          onChange={(e) => setExtra(e.target.value)}
         />
         <button type="submit">Generate Recipe</button>
       </form>

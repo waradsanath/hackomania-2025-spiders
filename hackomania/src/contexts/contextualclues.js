@@ -10,6 +10,7 @@ function Context() {
   const [diet, setDiet] = useState("");
   const [spice, setSpice] = useState("");
   const [variable, setVariable] = useState("");
+  const [variable2, setVariable2] = useState("")
   const [extra, setExtra] = useState("")
 
   const handleSubmit = async (e) => {
@@ -26,16 +27,29 @@ function Context() {
         ${isMicr ? "They have a microwave." : "They do not have a microwave."}
         Their dietary preference is ${diet}.
         They prefer a spice level of ${spice}.
-        They have extra preferences of ${extra}.
+        They have extra preferences of ${extra}. Generate the JUST THE ingredients and NOTHING ELSE needed to make this dish. Strictly no bold.
     `;
+    const prompt2 = `
+    A person would like a recipe of ${cal} calories of ${cuis} cuisine.
+        They would like it to be under ${budg} budget.
+        ${isOven ? "They have an oven." : "They do not have an oven."}
+        ${isMicr ? "They have a microwave." : "They do not have a microwave."}
+        Their dietary preference is ${diet}.
+        They prefer a spice level of ${spice}.
+        They have extra preferences of ${extra}. The ingredients are ${prompt}. GENERATE THE RECIPE AND STRICTLY NO BOLD
+    `
 
     try {
       const result = await model.generateContent([prompt]); // Fix API Call
-      const textResponse = await result.response.text(); // Correct response parsing
+      const result2 = await model.generateContent([prompt2]);
+      const textResponse = await result.response.text();
+      const textResponse2 = await result2.response.text(); // Correct response parsing
       setVariable(textResponse);
+      setVariable2(textResponse2)
     } catch (error) {
       console.error("Error:", error);
       setVariable("Failed to fetch recipe. Try again.");
+      setVariable2("Failed to fetch recipe. Try again.")
     }
   };
 
@@ -113,8 +127,14 @@ function Context() {
         />
         <button type="submit">Generate Recipe</button>
       </form>
+<<<<<<< Updated upstream
       <p>{variable}</p>
       </div>
+=======
+      <p><bold>Ingredients: {variable}</bold></p>
+      <p>{variable2}</p>
+    </div>
+>>>>>>> Stashed changes
   );
 }
 

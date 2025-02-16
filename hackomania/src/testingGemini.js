@@ -41,7 +41,7 @@ function Geminie() {
                 <Link to="/">To Home</Link>
             </div>
         </header>
-
+<div className="body">
             <div className="gemini">
                 <div style={{padding:100, fontSize:50}}> 
                 <input placeholder="value" type="text" onChange={(e)=>setPrompta(e.target.value)}/>
@@ -51,7 +51,7 @@ function Geminie() {
                 {reply ? <p>{reply}</p> : <p>Loading...</p>}
 
                 
-
+                </div>
             </div>
         </div>
     )
